@@ -87,6 +87,16 @@ Do not start a later step until I confirm the previous one is locked.
 - If a decision isn't covered here or in `copy.md`, ask before improvising.
 - If you notice something inconsistent between this file and `copy.md`, flag it — `copy.md` wins.
 
+## Before finishing any task
+
+After writing or modifying code, and before proposing a commit:
+
+1. Run `npm run lint` — fix any errors. Warnings are case-by-case; flag them and ask.
+2. Run `npm run format` — apply Prettier formatting.
+3. If either tool reports issues you can't auto-fix, surface them to me before committing.
+
+Do not skip these steps. Linted, formatted code is the bar for every commit.
+
 ## Commit conventions
 
 Use Conventional Commits for every commit message. Format: `type(scope): subject`.
