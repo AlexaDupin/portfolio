@@ -1,4 +1,5 @@
 @AGENTS.md
+
 # Portfolio site — Claude Code context
 
 ## What this project is
@@ -85,3 +86,18 @@ Do not start a later step until I confirm the previous one is locked.
 - Show me the diff before applying any change that touches more than one file.
 - If a decision isn't covered here or in `copy.md`, ask before improvising.
 - If you notice something inconsistent between this file and `copy.md`, flag it — `copy.md` wins.
+
+## Commit conventions
+
+Use Conventional Commits for every commit message. Format: `type(scope): subject`.
+
+Common types: `feat`, `fix`, `chore`, `docs`, `style`, `refactor`, `test`, `build`, `ci`.
+
+Scope is optional but encouraged when the change is localized (e.g., `feat(nav): ...`, `fix(hero): ...`).
+
+Subject is lowercase, imperative mood, no trailing period. Keep under ~70 chars.
+
+Examples:
+
+- `feat(nav): add shared nav component`
+- `fix(hero): correct mobile breakpoint for two-column layout`
