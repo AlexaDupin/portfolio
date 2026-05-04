@@ -49,7 +49,7 @@ This file is the single source of truth for every word on the portfolio site. Do
 - **Headline (3 lines, large serif, third line italic mustard):**
   Full-stack
   engineer who
-  *ships.*
+  _ships._
 
 - **Supporting paragraph (sans, two lines):**
   TypeScript, React, Node, PostgreSQL. Currently running WeSwapCards, a production platform with 965+ users.
@@ -77,6 +77,7 @@ This file is the single source of truth for every word on the portfolio site. Do
 
 - **Eyebrow:** OTHER WORK
 - **Heading (serif):** Also worth a look.
+- **Section footer link (small text-link, mustard, below the two cards):** See all work → (links to `/work`)
 
 #### Card 1 — WeSwapCards Mobile
 
@@ -107,7 +108,7 @@ This file is the single source of truth for every word on the portfolio site. Do
 
 - **Italic line (serif italic, 2 lines, second line mustard):**
   Built and operated solo. Used by 965 people
-  *to swap WeWard cards.*
+  _to swap WeWard cards._
 
 - **Status pill (dark green fill, mustard dot):**
   Live since Feb 2025 · 965+ members
@@ -124,7 +125,6 @@ This file is the single source of truth for every word on the portfolio site. Do
 - **Heading (serif):** A real product, not a portfolio piece.
 
 - **Two columns of body prose:**
-
   - **Left column:**
     WeSwapCards is a platform where collectors of WeWard cards find swap partners, message about trades, and track progress toward complete sets. It launched in February 2025 after four months of development.
 
@@ -137,16 +137,16 @@ This file is the single source of truth for every word on the portfolio site. Do
   - 200K+ MESSAGES EXCHANGED
 
 - **Italic engagement line (serif italic, below the metrics strip, smaller than headings):**
-  *Averaged 317 monthly active users from July 2025 to February 2026, peaking at 334 in January 2026, the month before WeWard launched a competing feature inside their own app.*
+  _Averaged 317 monthly active users from July 2025 to February 2026, peaking at 334 in January 2026, the month before WeWard launched a competing feature inside their own app._
 
 ### Section 3 — My Role
 
 - **Eyebrow:** 03 · MY ROLE
 
 - **Italic body (large serif italic, 3 lines, prominent):**
-  *I designed, built, and operate WeSwapCards solo:*
-  *architecture, frontend, backend, database, auth,*
-  *deployment, and ongoing user support.*
+  _I designed, built, and operate WeSwapCards solo:_
+  _architecture, frontend, backend, database, auth,_
+  _deployment, and ongoing user support._
 
 ### Section 4 — Architecture
 
@@ -226,10 +226,11 @@ They're joined by `explorer.userid`, which holds the Clerk UID. The consequence:
 Authorization runs in four layers:
 
 ```js
-app.use(clerkMiddleware());                              // populates req.auth
-router.post('/login/user', requireAuth(), handler);      // unauthenticated → reject
+app.use(clerkMiddleware()); // populates req.auth
+router.post('/login/user', requireAuth(), handler); // unauthenticated → reject
 const explorer = await getExplorerIdByClerkId(req.auth.userId);
-if (explorer.id !== Number(req.params.explorerId))       // ownership check
+if (explorer.id !== Number(req.params.explorerId))
+  // ownership check
   return res.status(403).end();
 // + DB unique constraints as the final guard
 ```
@@ -273,12 +274,12 @@ Components that only dispatch, the majority, never re-render when state changes.
 
 The discipline is in what's global and what isn't.
 
-| State | Lives in |
-|---|---|
-| `explorer.id`, `explorer.name` | Global store |
-| Active swap: target user, card, conversation | Global store |
-| Page-scoped async data | Feature reducers |
-| Loading flags, alerts, form values | Local `useState` |
+| State                                        | Lives in         |
+| -------------------------------------------- | ---------------- |
+| `explorer.id`, `explorer.name`               | Global store     |
+| Active swap: target user, card, conversation | Global store     |
+| Page-scoped async data                       | Feature reducers |
+| Loading flags, alerts, form values           | Local `useState` |
 
 State that crosses routes goes global. State scoped to a single feature stays in that feature. Ephemeral UI stays in `useState`. Nothing in the global store is a data cache.
 
@@ -291,7 +292,7 @@ UI components don't consume context directly. Feature logic lives in `useXLogic`
 - **Eyebrow:** 06 · REFLECTION
 
 - **Italic body (large serif italic, prominent):**
-  *A year of operating WeSwapCards taught me where I'd build differently. I started with Sqitch migrations and drifted off them; the conversation and message tables exist only in the database now, not in version control. Testing was an afterthought I keep meaning to come back to. None of it is breaking anything in production, but each one is something I'd do from day one if I rebuilt it. Activity has dropped since WeWard launched their native version, and the mobile rebuild I'm working on now is partly a response: making the experience good enough on a different surface to compete on different terms.*
+  _A year of operating WeSwapCards taught me where I'd build differently. I started with Sqitch migrations and drifted off them; the conversation and message tables exist only in the database now, not in version control. Testing was an afterthought I keep meaning to come back to. None of it is breaking anything in production, but each one is something I'd do from day one if I rebuilt it. Activity has dropped since WeWard launched their native version, and the mobile rebuild I'm working on now is partly a response: making the experience good enough on a different surface to compete on different terms._
 
 ### Section 7 — Mobile callout
 
@@ -300,8 +301,8 @@ This section is a dark slab (dark green fill) sitting after the reflection. Whit
 - **Eyebrow (mustard, small caps):** WHAT'S NEXT
 - **Title (large serif, cream):** WeSwapCards Mobile.
 - **Italic supporting line (cream, 2 lines):**
-  *Same backend, new client. A React Native rewrite in TypeScript,*
-  *and the architectural lessons from a year of running the web app.*
+  _Same backend, new client. A React Native rewrite in TypeScript,_
+  _and the architectural lessons from a year of running the web app._
 - **Button (mustard fill, dark text):** Continue to the mobile rebuild →
 
 ### Section 8 — Footer (case study only)
@@ -341,7 +342,7 @@ Status: not yet drafted. Structure outlined below for future drafting. Lighter t
 - **Title:** Actiively.
 - **Italic line (2 lines, second line mustard):**
   [TBD: a positioning line that signals the team dimension]
-  *[TBD: italic mustard close]*
+  _[TBD: italic mustard close]_
 - **Status pill:** [TBD: e.g., "Bootcamp final project · Team of 4"]
 - **CTAs:**
   - Primary: View on GitHub
@@ -351,9 +352,10 @@ Status: not yet drafted. Structure outlined below for future drafting. Lighter t
 
 - **Eyebrow:** MY ROLE
 
-This section needs to do something different from WeSwapCards. WeSwapCards establishes ownership ("I designed, built, and operate solo"). Actiively needs to establish *contribution within a team*. Worth distinguishing what was individually authored versus collaboratively decided.
+This section needs to do something different from WeSwapCards. WeSwapCards establishes ownership ("I designed, built, and operate solo"). Actiively needs to establish _contribution within a team_. Worth distinguishing what was individually authored versus collaboratively decided.
 
 Suggested shape:
+
 - One sentence on team size and structure
 - One sentence on the parts you owned individually
 - One sentence on cross-team contributions (concept pitch, technical support to teammates, stand-up facilitation)
@@ -364,6 +366,7 @@ Suggested shape:
 - **Heading:** [TBD]
 
 This is the section that justifies why Actiively gets its own page. Should cover:
+
 - Team size and roles (4 people)
 - Gitflow as the branching model: feature branches, develop branch, release process, merge strategy
 - Agile/scrum cadence: sprint length, stand-up format, retros
@@ -380,6 +383,7 @@ This is where to lean into specifics. "Used agile" is generic. "Two-week sprints
 One or two highlights, not three. Actiively is supporting evidence, not the centerpiece. Pick the most distinctive technical decision you owned individually. Same card structure as WeSwapCards (number, eyebrow, title, summary, deep-dive on click).
 
 Possible angles to consider when drafting:
+
 - The JWT auth flow (if it's distinct from a tutorial implementation)
 - A schema or query decision
 - A specific React or Node pattern you introduced to the team
@@ -399,3 +403,77 @@ Possible angles to consider when drafting:
 - All screenshots in `brand_assets/screenshots/` should be high-resolution captures of the real product. Replace placeholders before launch.
 - Architecture diagram (the layered stack graphic) is implemented as SVG with the brand colors, not as static PNG.
 - Test all outbound links (LinkedIn, GitHub) before deploying.
+
+## Work index page (/work)
+
+Status: minimalist grid layout. Three cards side by side on desktop, stacked on mobile. No intro prose.
+
+### Page heading
+
+- **Eyebrow (small caps, letter-spaced):** PORTFOLIO
+- **Heading (very large serif):** Work.
+
+### Cards
+
+Three cards, equal width, displayed in a responsive grid (3 columns desktop, 1 column mobile).
+
+#### Card 1 — WeSwapCards
+
+- **Status pill (dark green fill, mustard dot):** LIVE
+- **Title (serif):** WeSwapCards.
+- **Body:** A production platform where collectors of WeWard cards find swap partners and trade. Built and operated solo. Live since February 2025.
+- **Stack chips:** React · Node · PostgreSQL · Clerk
+- **Card click target:** `/work/weswapcards`
+
+#### Card 2 — WeSwapCards Mobile
+
+Reuses the exact card from the Homepage Other Work section. Click target updated:
+
+- **Status pill:** IN PROGRESS (mustard fill)
+- **Title (serif):** WeSwapCards Mobile.
+- **Body:** A React Native rewrite in TypeScript with stricter type checking and a state-machine auth model. Same backend, new client.
+- **Stack chips:** React Native · TypeScript · Expo Router
+- **Card click target:** `/work/weswapcards-mobile` (placeholder page, see below)
+
+#### Card 3 — Actiively
+
+Reuses the exact card from the Homepage Other Work section.
+
+- **Status pill:** PORTFOLIO (outlined)
+- **Title (serif):** Actiively.
+- **Body:** A full-stack web app built as a portfolio piece during my development training. Frontend, backend, database, and JWT auth.
+- **Stack chips:** React · Node · PostgreSQL · JWT
+- **Footer label (small, faded, below stack chips):** Case study coming soon
+- **Card click target:** `/work/actiively`
+
+---
+
+## WeSwapCards Mobile placeholder page (/work/weswapcards-mobile)
+
+Minimal placeholder until the full case study is drafted later this week.
+
+- **Eyebrow (with mustard rule):** 02 · CASE STUDY
+- **Eyebrow right (faded):** PROJECT · MOBILE
+- **Title (very large serif):** WeSwapCards Mobile.
+- **Italic line (serif italic, 2 lines, second line mustard):**
+  Same backend, new client. A React Native rewrite
+  _coming soon._
+- **Status pill:** IN PROGRESS (mustard fill)
+- **CTA (single):** View on GitHub → links to `https://github.com/AlexaDupin/WeSwapCards-native`
+- **Body paragraph:**
+  Full case study coming soon. In the meantime, the source is on GitHub.
+
+## Actiively placeholder page (/work/actiively)
+
+Minimal placeholder, mirroring the WSC Mobile placeholder structure. Full case study to be drafted later.
+
+- **Eyebrow (with mustard rule):** 03 · CASE STUDY
+- **Eyebrow right (faded):** PROJECT · TEAM
+- **Title (very large serif):** Actiively.
+- **Italic line (serif italic, 2 lines, second line mustard):**
+  A full-stack web app built with a team of four
+  _coming soon._
+- **Status pill:** PORTFOLIO (outlined)
+- **CTA (single):** View on GitHub → links to `https://github.com/AlexaDupin/actiively`
+- **Body paragraph:**
+  Full case study coming soon. In the meantime, the source is on GitHub.
