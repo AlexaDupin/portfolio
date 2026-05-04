@@ -1,14 +1,10 @@
 export default function Footer() {
   return (
-    <footer className="w-full border-t border-green/10 bg-cream">
-      <div className="mx-auto max-w-6xl px-6 py-8 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+    <footer className="border-green/10 bg-cream w-full border-t">
+      <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-8 md:flex-row md:items-end md:justify-between">
         <div>
-          <p className="font-sans text-sm text-green">
-            Brooklyn, NY · Available for hybrid roles
-          </p>
-          <p className="font-sans text-xs text-green/50 mt-1">
-            © 2026 Alexa Dupin
-          </p>
+          <p className="text-green font-sans text-sm">Brooklyn, NY · Available for hybrid roles</p>
+          <p className="text-green/50 mt-1 font-sans text-xs">© 2026 Alexa Dupin</p>
         </div>
 
         <div className="flex gap-6">
@@ -16,7 +12,7 @@ export default function Footer() {
             href="https://www.linkedin.com/in/alexa-dupin"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-sans text-sm text-green hover:text-mustard transition-colors"
+            className="text-green hover:text-mustard font-sans text-sm transition-colors"
           >
             LinkedIn
           </a>
@@ -24,7 +20,7 @@ export default function Footer() {
             href="https://github.com/AlexaDupin"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-sans text-sm text-green hover:text-mustard transition-colors"
+            className="text-green hover:text-mustard font-sans text-sm transition-colors"
           >
             GitHub
           </a>

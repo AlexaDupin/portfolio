@@ -7,23 +7,23 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="w-full bg-cream">
-      <div className="mx-auto max-w-6xl px-6 py-5 flex items-center justify-between">
-        <Link href="/" className="font-serif text-2xl text-green">
+    <header className="bg-cream w-full">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+        <Link href="/" className="text-green font-serif text-2xl">
           AD<span className="text-mustard">.</span>
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden items-center gap-8 md:flex">
           <Link
             href="/work"
-            className="font-sans text-sm text-green hover:text-mustard transition-colors"
+            className="text-green hover:text-mustard font-sans text-sm transition-colors"
           >
             Work
           </Link>
           <Link
             href="/about"
-            className="font-sans text-sm text-green hover:text-mustard transition-colors"
+            className="text-green hover:text-mustard font-sans text-sm transition-colors"
           >
             About
           </Link>
@@ -31,7 +31,7 @@ export default function Nav() {
             href="https://github.com/AlexaDupin"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-sans text-sm text-green hover:text-mustard transition-colors"
+            className="text-green hover:text-mustard font-sans text-sm transition-colors"
           >
             GitHub
           </a>
@@ -39,19 +39,19 @@ export default function Nav() {
             href="https://www.linkedin.com/in/alexa-dupin"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-sans text-sm bg-green text-cream rounded-full px-5 py-2 hover:opacity-90 transition-opacity"
+            className="bg-green text-cream rounded-full px-5 py-2 font-sans text-sm transition-opacity hover:opacity-90"
           >
             Get in touch
           </a>
         </nav>
 
         {/* Mobile: CTA + hamburger */}
-        <div className="flex md:hidden items-center gap-4">
+        <div className="flex items-center gap-4 md:hidden">
           <a
             href="https://www.linkedin.com/in/alexa-dupin"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-sans text-sm bg-green text-cream rounded-full px-4 py-2"
+            className="bg-green text-cream rounded-full px-4 py-2 font-sans text-sm"
           >
             Get in touch
           </a>
@@ -89,18 +89,18 @@ export default function Nav() {
 
       {/* Mobile panel */}
       {open && (
-        <div className="md:hidden border-t border-green/10 bg-cream px-6 py-5 flex flex-col gap-5">
+        <div className="border-green/10 bg-cream flex flex-col gap-5 border-t px-6 py-5 md:hidden">
           <Link
             href="/work"
             onClick={() => setOpen(false)}
-            className="font-sans text-sm text-green"
+            className="text-green font-sans text-sm"
           >
             Work
           </Link>
           <Link
             href="/about"
             onClick={() => setOpen(false)}
-            className="font-sans text-sm text-green"
+            className="text-green font-sans text-sm"
           >
             About
           </Link>
@@ -108,7 +108,7 @@ export default function Nav() {
             href="https://github.com/AlexaDupin"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-sans text-sm text-green"
+            className="text-green font-sans text-sm"
           >
             GitHub
           </a>
