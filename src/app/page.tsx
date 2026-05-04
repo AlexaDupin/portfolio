@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ProjectCard from "@/components/ui/ProjectCard";
 
 export default function Home() {
   return (
@@ -29,7 +30,7 @@ export default function Home() {
             </p>
 
             {/* Status pill */}
-            <div className="border-green/60 text-green inline-flex items-center gap-2 self-start rounded border px-4 py-2 font-sans text-sm">
+            <div className="border-green/60 text-green inline-flex items-center gap-2 self-start rounded-full border px-4 py-2 font-sans text-sm">
               <span className="bg-signal h-2 w-2 flex-shrink-0 rounded-full" />
               Available · Open to hybrid roles in NYC
             </div>
@@ -38,7 +39,7 @@ export default function Home() {
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/work"
-                className="bg-mustard text-green rounded-full px-6 py-3 font-sans text-sm transition-opacity hover:opacity-90"
+                className="bg-mustard text-green rounded px-6 py-3 font-sans text-sm transition-opacity hover:opacity-90"
               >
                 See my work →
               </Link>
@@ -46,7 +47,7 @@ export default function Home() {
                 href="https://www.linkedin.com/in/alexa-dupin"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border-green text-green hover:bg-green/5 rounded-full border px-6 py-3 font-sans text-sm transition-colors"
+                className="border-green text-green hover:bg-green/5 rounded border px-6 py-3 font-sans text-sm transition-colors"
               >
                 Connect on LinkedIn
               </a>
@@ -87,6 +88,52 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Other Work */}
+      <section className="mx-auto max-w-6xl px-6">
+        <div className="bg-green/10 h-px" />
+
+        <div className="py-20">
+          {/* Eyebrow with leading rule */}
+          <div className="flex items-center gap-4">
+            <div className="bg-mustard h-0.5 w-12" />
+            <span className="text-green font-sans text-xs tracking-widest uppercase">
+              OTHER WORK
+            </span>
+          </div>
+
+          <h2 className="text-green mt-8 font-serif text-4xl">Also worth a look.</h2>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
+            <ProjectCard
+              status={{ label: "IN PROGRESS", variant: "filled" }}
+              title="WeSwapCards Mobile."
+              body="A React Native rewrite in TypeScript with stricter type checking and a state-machine auth model. Same backend, new client."
+              stack={["React Native", "TypeScript", "Expo Router"]}
+              href="/work/weswapcards-mobile"
+            />
+            <ProjectCard
+              status={{ label: "PORTFOLIO", variant: "outlined" }}
+              title="Actiively."
+              body="A full-stack web app built as a portfolio piece during my development training. Frontend, backend, database, and JWT auth."
+              stack={["React", "Node", "PostgreSQL", "JWT"]}
+              footerLabel="Case study coming soon →"
+              href="/work/actiively"
+            />
+          </div>
+
+          <div className="mt-10 flex justify-end">
+            <Link
+              href="/work"
+              className="text-mustard font-sans text-sm transition-opacity hover:opacity-70"
+            >
+              See all work →
+            </Link>
+          </div>
+        </div>
+
+        <div className="bg-green/10 h-px" />
       </section>
     </main>
   );
