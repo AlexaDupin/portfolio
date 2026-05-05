@@ -24,10 +24,10 @@ export default function WeSwapCardsPage() {
         </h1>
 
         {/* Italic statement */}
-        <p className="text-green mt-8 font-serif text-xl leading-snug italic md:text-2xl">
+        <p className="text-green mt-8 font-serif text-xl leading-snug md:text-2xl">
           Built and operated solo. Used by 965 people
           <br />
-          <span className="text-mustard">to swap WeWard cards.</span>
+          <span className="text-mustard italic">to swap WeWard cards.</span>
         </p>
 
         {/* Status pill */}
@@ -35,7 +35,7 @@ export default function WeSwapCardsPage() {
           <StatusPill
             variant="darkFilled"
             label="Live since Feb 2025 · 965+ members"
-            className="tracking-normal normal-case"
+            className="text-cream tracking-normal normal-case"
           />
         </div>
 
