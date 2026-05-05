@@ -534,8 +534,8 @@ export default function WeSwapCardsPage() {
       </section>
 
       {/* Section 7 — Mobile callout */}
-      <section className="bg-green">
-        <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+      <section className="mx-auto max-w-6xl px-6 pb-20 md:pb-24">
+        <div className="bg-green rounded-2xl px-10 py-16 md:px-16 md:py-20">
           {/* Eyebrow */}
           <p className="text-mustard font-sans text-xs tracking-widest uppercase">
             WHAT&apos;S NEXT
