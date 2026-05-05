@@ -168,6 +168,56 @@ export default function WeSwapCardsPage() {
           </p>
         </div>
       </section>
+
+      {/* Section 4 — Architecture */}
+      <section className="mx-auto max-w-6xl px-6 pb-20 md:pb-24">
+        <div className="bg-green/10 h-px" />
+        <div className="pt-20 md:pt-24">
+          {/* Eyebrow */}
+          <div className="flex items-center gap-3">
+            <div className="bg-mustard h-0.5 w-10" />
+            <span className="text-green font-sans text-xs tracking-widest uppercase">
+              04 · ARCHITECTURE
+            </span>
+          </div>
+
+          {/* Heading */}
+          <h2 className="text-green mt-8 font-serif text-4xl">A clean separation of concerns.</h2>
+
+          {/* Body */}
+          <p className="text-green mt-6 font-sans text-base leading-relaxed">
+            A React frontend talks to an Express REST API backed by PostgreSQL, with Clerk handling
+            authentication. The shape is deliberately conventional.
+          </p>
+
+          {/* Stack diagram */}
+          <div className="mt-12 flex flex-col gap-5">
+            {/* Frontend */}
+            <div className="rounded-lg border border-[#534AB7] bg-[#EEEDFE] px-6 py-5 md:px-8">
+              <p className="font-sans text-[15px] leading-tight font-medium text-[#26215C]">
+                Frontend
+              </p>
+              <p className="mt-1 font-sans text-[13px] leading-tight text-[#3C3489]">
+                React 18, React Router 6, Context + useReducer
+              </p>
+            </div>
+            {/* API */}
+            <div className="rounded-lg border border-[#0F6E56] bg-[#E1F5EE] px-6 py-5 md:px-8">
+              <p className="font-sans text-[15px] leading-tight font-medium text-[#04342C]">API</p>
+              <p className="mt-1 font-sans text-[13px] leading-tight text-[#085041]">
+                Node 22, Express 4, Clerk authentication middleware
+              </p>
+            </div>
+            {/* Data */}
+            <div className="rounded-lg border border-[#5F5E5A] bg-[#F1EFE8] px-6 py-5 md:px-8">
+              <p className="font-sans text-[15px] leading-tight font-medium text-[#2C2C2A]">Data</p>
+              <p className="mt-1 font-sans text-[13px] leading-tight text-[#444441]">
+                PostgreSQL, pg driver
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
