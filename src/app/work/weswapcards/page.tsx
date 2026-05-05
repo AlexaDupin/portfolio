@@ -77,6 +77,97 @@ export default function WeSwapCardsPage() {
           />
         </div>
       </section>
+
+      {/* Section 2 — Overview */}
+      <section className="mx-auto max-w-6xl px-6 pb-20 md:pb-24">
+        <div className="bg-green/10 h-px" />
+        <div className="pt-20 md:pt-24">
+          {/* Eyebrow */}
+          <div className="flex items-center gap-3">
+            <div className="bg-mustard h-0.5 w-10" />
+            <span className="text-green font-sans text-xs tracking-widest uppercase">
+              02 · OVERVIEW
+            </span>
+          </div>
+
+          {/* Heading */}
+          <h2 className="text-green mt-8 font-serif text-4xl">
+            A real product, not a portfolio piece.
+          </h2>
+
+          {/* Two-column prose */}
+          <div className="mt-10 grid gap-8 md:grid-cols-2">
+            <p className="text-green font-sans text-base leading-relaxed">
+              WeSwapCards is a platform where collectors of WeWard cards find swap partners, message
+              about trades, and track progress toward complete sets. It launched in February 2025
+              after four months of development.
+            </p>
+            <p className="text-green font-sans text-base leading-relaxed">
+              I built it because no good tool existed for the WeWard community. Collectors were
+              coordinating swaps across scattered group chats and losing track of who had what.
+              WeSwapCards gave them one place to find each other, talk, and trade. A year later,
+              WeWard launched the same feature inside their own app.
+            </p>
+          </div>
+
+          {/* Metrics strip */}
+          <div className="divide-green/15 mt-16 flex flex-col divide-y md:flex-row md:divide-x md:divide-y-0">
+            <div className="flex flex-col gap-2 py-8 md:flex-1 md:py-6 md:pr-10">
+              <p className="text-green font-serif text-6xl leading-none">
+                965<span className="text-mustard italic">+</span>
+              </p>
+              <p className="text-green/70 font-sans text-xs tracking-widest uppercase">Members</p>
+            </div>
+            <div className="flex flex-col gap-2 py-8 md:flex-1 md:px-10 md:py-6">
+              <p className="text-green font-serif text-6xl leading-none">
+                15K<span className="text-mustard italic">+</span>
+              </p>
+              <p className="text-green/70 font-sans text-xs tracking-widest uppercase">
+                Trades coordinated
+              </p>
+            </div>
+            <div className="flex flex-col gap-2 py-8 md:flex-1 md:py-6 md:pl-10">
+              <p className="text-green font-serif text-6xl leading-none">
+                200K<span className="text-mustard italic">+</span>
+              </p>
+              <p className="text-green/70 font-sans text-xs tracking-widest uppercase">
+                Messages exchanged
+              </p>
+            </div>
+          </div>
+
+          {/* Engagement line */}
+          <p className="text-green mt-10 font-serif text-xl leading-relaxed italic">
+            Averaged 317 monthly active users from July 2025 to February 2026,
+            <br />
+            peaking at 334 in January 2026, the month before WeWard launched a<br />
+            competing feature inside their own app.
+          </p>
+        </div>
+      </section>
+
+      {/* Section 3 — My Role */}
+      <section className="mx-auto max-w-6xl px-6 pb-20 md:pb-24">
+        <div className="bg-green/10 h-px" />
+        <div className="pt-20 md:pt-24">
+          {/* Eyebrow */}
+          <div className="flex items-center gap-3">
+            <div className="bg-mustard h-0.5 w-10" />
+            <span className="text-green font-sans text-xs tracking-widest uppercase">
+              03 · MY ROLE
+            </span>
+          </div>
+
+          {/* Large italic block */}
+          <p className="text-green mt-10 font-serif text-3xl leading-relaxed italic md:text-4xl">
+            I designed, built, and operate WeSwapCards solo:
+            <br />
+            architecture, frontend, backend, database, auth,
+            <br />
+            deployment, and ongoing user support.
+          </p>
+        </div>
+      </section>
     </main>
   );
 }
