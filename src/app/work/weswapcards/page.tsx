@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ExpandCard } from "@/components/ui/ExpandCard";
 import { StatusPill } from "@/components/ui/StatusPill";
 
@@ -503,6 +504,83 @@ export default function WeSwapCardsPage() {
               </p>
             </ExpandCard>
           </div>
+        </div>
+      </section>
+
+      {/* Section 6 — Reflection */}
+      <section className="mx-auto max-w-6xl px-6 pb-20 md:pb-24">
+        <div className="bg-green/10 h-px" />
+        <div className="pt-20 md:pt-24">
+          {/* Eyebrow */}
+          <div className="flex items-center gap-3">
+            <div className="bg-mustard h-0.5 w-10" />
+            <span className="text-green font-sans text-xs tracking-widest uppercase">
+              06 · REFLECTION
+            </span>
+          </div>
+
+          {/* Large italic paragraph */}
+          <p className="text-green mt-10 font-serif text-2xl leading-relaxed italic md:text-3xl">
+            A year of operating WeSwapCards taught me where I&apos;d build differently. I started
+            with Sqitch migrations and drifted off them; the conversation and message tables exist
+            only in the database now, not in version control. Testing was an afterthought I keep
+            meaning to come back to. None of it is breaking anything in production, but each one is
+            something I&apos;d do from day one if I rebuilt it. Activity has dropped since WeWard
+            launched their native version, and the mobile rebuild I&apos;m working on now is partly
+            a response: making the experience good enough on a different surface to compete on
+            different terms.
+          </p>
+        </div>
+      </section>
+
+      {/* Section 7 — Mobile callout */}
+      <section className="bg-green">
+        <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+          {/* Eyebrow */}
+          <p className="text-mustard font-sans text-xs tracking-widest uppercase">
+            WHAT&apos;S NEXT
+          </p>
+
+          {/* Title */}
+          <h2 className="text-cream mt-6 font-serif text-4xl md:text-5xl">WeSwapCards Mobile.</h2>
+
+          {/* Italic supporting line */}
+          <p className="text-cream mt-6 font-serif text-xl leading-snug italic md:text-2xl">
+            Same backend, new client. A React Native rewrite in TypeScript,
+            <br />
+            and the architectural lessons from a year of running the web app.
+          </p>
+
+          {/* Button */}
+          <Link
+            href="/work/weswapcards-mobile"
+            className="bg-mustard text-green mt-10 inline-flex rounded px-6 py-3 font-sans text-sm transition-opacity hover:opacity-90"
+          >
+            Continue to the mobile rebuild →
+          </Link>
+        </div>
+      </section>
+
+      {/* Section 8 — Case study footer */}
+      <section className="mx-auto max-w-6xl px-6 pt-16 pb-20">
+        <div className="bg-green/15 h-px" />
+        <div className="mt-16 flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
+          {/* Left: back to all work */}
+          <Link href="/work" className="flex flex-col gap-1">
+            <span className="text-mustard font-sans text-xs tracking-widest uppercase">
+              ← PREVIOUS
+            </span>
+            <span className="text-green font-sans text-sm">Back to all work</span>
+          </Link>
+
+          {/* Right: next project */}
+          <Link
+            href="/work/weswapcards-mobile"
+            className="flex flex-col gap-1 md:items-end md:text-right"
+          >
+            <span className="text-mustard font-sans text-xs tracking-widest uppercase">NEXT →</span>
+            <span className="text-green font-sans text-sm">WeSwapCards Mobile</span>
+          </Link>
         </div>
       </section>
     </main>
