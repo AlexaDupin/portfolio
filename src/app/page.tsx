@@ -53,9 +53,9 @@ export default function Home() {
           </div>
 
           {/* Right column */}
-          <div>
+          <Link href="/work/weswapcards" className="block">
             {/* Browser frame */}
-            <div className="border-green/10 overflow-hidden rounded-lg border">
+            <div className="border-green/10 hover:border-green/25 overflow-hidden rounded-lg border transition-colors">
               <div className="border-green/10 bg-green/5 flex items-center gap-1.5 border-b px-3 py-2.5">
                 <span className="h-2.5 w-2.5 rounded-full bg-black/20" />
                 <span className="h-2.5 w-2.5 rounded-full bg-black/20" />
@@ -84,7 +84,7 @@ export default function Home() {
                 965 users · 15K+ transactions
               </p>
             </div>
-          </div>
+          </Link>
         </div>
       </section>
 
