@@ -48,6 +48,7 @@ Defined in detail in `brand_assets/copy.md`. Summary:
 - **Background:** cream `#F5EFE3`
 - **Primary text:** dark green `#1F4239`
 - **Accent:** mustard `#C68A14`
+- **Signal:** bright green `#22c55e` — used only for availability/active/status indicators (e.g., the dot in the homepage "Available" pill). Not for general UI. Distinct from `green` which is the editorial brand color.
 - **Display font:** editorial serif (Fraunces is the leading candidate; Playfair Display and Cormorant Garamond are alternates)
 - **Body font:** Inter or system-ui sans
 

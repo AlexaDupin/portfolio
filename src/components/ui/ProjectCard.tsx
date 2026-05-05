@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import Link from "next/link";
 import { StatusPill } from "@/components/ui/StatusPill";
 
@@ -23,8 +24,9 @@ export default function ProjectCard({
   footerLabel,
   href,
 }: ProjectCardProps) {
-  const className =
-    "flex h-full flex-col gap-4 rounded-2xl border border-green/10 bg-card p-7 transition-all duration-200 hover:scale-[1.02] hover:border-green/25";
+  const className = clsx(
+    "flex h-full flex-col gap-4 rounded-2xl border border-green/10 bg-card p-7 transition-all duration-200 hover:scale-[1.02] hover:border-green/25"
+  );
 
   const inner = (
     <>
