@@ -1,35 +1,18 @@
 import Link from "next/link";
+import { StatusPill } from "@/components/ui/StatusPill";
 
-interface StatusPillProps {
+interface CardStatus {
   label: string;
   variant: "filled" | "outlined" | "darkFilled";
 }
 
 interface ProjectCardProps {
-  status: StatusPillProps;
+  status: CardStatus;
   title: string;
   body: string;
   stack: string[];
   footerLabel?: string;
   href: string;
-}
-
-function StatusPill({ label, variant }: StatusPillProps) {
-  const base =
-    "inline-flex self-start items-center gap-1.5 rounded-full px-3 py-1 font-sans text-[11px] uppercase tracking-widest";
-
-  if (variant === "filled") {
-    return <span className={`${base} bg-mustard text-green`}>{label}</span>;
-  }
-  if (variant === "outlined") {
-    return <span className={`${base} border-green text-green border`}>{label}</span>;
-  }
-  return (
-    <span className={`${base} bg-green text-mustard`}>
-      <span className="bg-mustard h-1.5 w-1.5 rounded-full" />
-      {label}
-    </span>
-  );
 }
 
 export default function ProjectCard({
@@ -45,7 +28,7 @@ export default function ProjectCard({
 
   const inner = (
     <>
-      <StatusPill {...status} />
+      <StatusPill variant={status.variant} label={status.label} />
       <div className="flex flex-col gap-3">
         <h3 className="text-green font-serif text-2xl">{title}</h3>
         <p className="text-green font-sans text-sm leading-relaxed">{body}</p>

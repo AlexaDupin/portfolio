@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import ProjectCard from "@/components/ui/ProjectCard";
+import { StatusPill } from "@/components/ui/StatusPill";
 
 export default function Home() {
   return (
@@ -30,10 +31,7 @@ export default function Home() {
             </p>
 
             {/* Status pill */}
-            <div className="border-green/60 text-green inline-flex items-center gap-2 self-start rounded-full border px-4 py-2 font-sans text-sm">
-              <span className="bg-signal h-2 w-2 flex-shrink-0 rounded-full" />
-              Available · Open to hybrid roles in NYC
-            </div>
+            <StatusPill variant="withDot" label="Available · Open to hybrid roles in NYC" />
 
             {/* CTA row */}
             <div className="flex flex-wrap gap-3">
