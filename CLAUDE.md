@@ -66,7 +66,8 @@ No resume PDF on this site. Do not add a resume link anywhere.
 - The Next.js scaffold did not create a `components/` folder. Create `src/components/ui/` when you build the first shared component.
 - Page-specific components colocate under their route in `src/app/`.
 - Shared primitives (Nav, Footer, StatusPill, MetricBadge, ExpandCard) go in `src/components/ui/`.
-- The architecture diagram in the case study is implemented as inline SVG using brand color tokens. Do not use a PNG.
+- The architecture diagram uses scoped illustration colors (purple, teal, gray from the case study mockup). These are inline Tailwind arbitrary values (`bg-[#EEEDFE]`, etc.), not brand tokens. Do not add them to `globals.css`.
+- Visual diagrams should be implemented with HTML/CSS by default. SVG only when required for non-rectangular shapes, paths, or complex annotations. PNG/JPG raster is not allowed.
 - Highlight cards in the case study expand in place on click. Build a controlled-state React component. **Do not** use `<details>`/`<summary>`.
 - Mobile responsive: the asymmetric two-column hero collapses to stacked single column. The metrics strip re-flows to vertical. The three highlight cards stack vertically.
 
