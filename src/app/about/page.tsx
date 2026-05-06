@@ -21,7 +21,7 @@ export default function AboutPage() {
       <div className="bg-green/25 mt-12 h-px w-20" />
 
       {/* Body prose */}
-      <div className="mt-10 space-y-6">
+      <div className="mt-10 max-w-2xl space-y-6">
         <p className="text-green font-sans text-base leading-relaxed">
           I&apos;m a full-stack engineer working in TypeScript, React, Node, and PostgreSQL.
           WeSwapCards has been the center of my technical work for the last year and a half.
@@ -47,7 +47,7 @@ export default function AboutPage() {
             PRACTICAL DETAILS
           </span>
         </div>
-        <p className="text-green mt-8 font-serif text-2xl leading-snug">
+        <p className="text-green mt-8 max-w-2xl font-serif text-2xl leading-snug">
           Based in Brooklyn, NY. Open to hybrid roles in the New York area.{" "}
           <span className="text-mustard italic">No sponsorship required.</span>
         </p>
@@ -62,7 +62,7 @@ export default function AboutPage() {
           <div className="bg-mustard h-0.5 w-12" />
           <span className="text-green font-sans text-xs tracking-widest uppercase">CONTACT</span>
         </div>
-        <p className="text-green mt-8 font-serif text-2xl">
+        <p className="text-green mt-8 max-w-2xl font-serif text-2xl">
           The best way to reach me is on LinkedIn.
         </p>
         <div className="mt-8">
@@ -70,7 +70,7 @@ export default function AboutPage() {
             href="https://www.linkedin.com/in/alexa-dupin"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-mustard text-green rounded-md px-6 py-3 font-sans text-sm transition-opacity hover:opacity-90"
+            className="bg-mustard text-green max-w-2xl rounded-md px-6 py-3 font-sans text-sm transition-opacity hover:opacity-90"
           >
             Connect on LinkedIn →
           </a>
