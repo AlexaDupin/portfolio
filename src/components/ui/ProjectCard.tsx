@@ -49,13 +49,15 @@ export default function ProjectCard({
         </div>
       </div>
     ) : (
-      <Image
-        src={screenshot.src}
-        alt={screenshot.alt}
-        width={800}
-        height={450}
-        className="h-auto w-full rounded-t-2xl object-cover"
-      />
+      <div className="relative aspect-video w-full overflow-hidden rounded-t-2xl">
+        <Image
+          src={screenshot.src}
+          alt={screenshot.alt}
+          fill
+          sizes="(max-width: 768px) 100vw, 33vw"
+          className="object-cover"
+        />
+      </div>
     )
   ) : null;
 
