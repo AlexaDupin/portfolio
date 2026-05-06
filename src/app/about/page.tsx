@@ -8,12 +8,14 @@ export default function AboutPage() {
       </div>
 
       {/* Hero typographic statement */}
-      <p className="text-green mt-12 font-serif text-5xl leading-tight md:text-6xl">
+      <p className="text-green mt-12 font-serif text-4xl leading-tight md:text-5xl">
         I build production software in TypeScript,
-        <br />
+        <br className="hidden md:inline" />
         React, and Node.{" "}
         <span className="text-mustard italic">
-          Before that, 13 years in international product at Booking.com.
+          Before that, 13 years
+          <br className="hidden md:inline" />
+          in international product at Booking.com.
         </span>
       </p>
 
