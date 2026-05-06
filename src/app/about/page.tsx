@@ -48,7 +48,8 @@ export default function AboutPage() {
           </span>
         </div>
         <p className="text-green mt-8 max-w-2xl font-serif text-2xl leading-snug">
-          Based in Brooklyn, NY. Open to hybrid roles in the New York area.{" "}
+          Based in Brooklyn, NY. Open to hybrid roles in the{" "}
+          <span className="whitespace-nowrap">New York</span> area.{" "}
           <span className="text-mustard italic">No sponsorship required.</span>
         </p>
       </div>
