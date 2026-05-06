@@ -27,7 +27,7 @@ export default function WeSwapCardsPage() {
 
         {/* Italic statement */}
         <p className="text-green mt-8 font-serif text-xl leading-snug md:text-2xl">
-          Built and operated solo. Used by 965 people
+          Built and operated solo. Used by 980 people
           <br />
           <span className="text-mustard italic">to swap WeWard cards.</span>
         </p>
@@ -36,7 +36,7 @@ export default function WeSwapCardsPage() {
         <div className="mt-6">
           <StatusPill
             variant="darkFilled"
-            label="Live since Feb 2025 · 965+ members"
+            label="Live since Feb 2025 · 980+ members"
             className="text-cream tracking-normal normal-case"
           />
         </div>
@@ -116,13 +116,13 @@ export default function WeSwapCardsPage() {
           <div className="divide-green/15 mt-16 flex flex-col divide-y md:flex-row md:divide-x md:divide-y-0">
             <div className="flex flex-col gap-2 py-8 md:flex-1 md:py-6 md:pr-10">
               <p className="text-green font-serif text-6xl leading-none">
-                965<span className="text-mustard italic">+</span>
+                980<span className="text-mustard italic">+</span>
               </p>
               <p className="text-green/70 font-sans text-xs tracking-widest uppercase">Members</p>
             </div>
             <div className="flex flex-col gap-2 py-8 md:flex-1 md:px-10 md:py-6">
               <p className="text-green font-serif text-6xl leading-none">
-                15K<span className="text-mustard italic">+</span>
+                16K<span className="text-mustard italic">+</span>
               </p>
               <p className="text-green/70 font-sans text-xs tracking-widest uppercase">
                 Trades coordinated

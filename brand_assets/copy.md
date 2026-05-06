@@ -52,7 +52,7 @@ This file is the single source of truth for every word on the portfolio site. Do
   _ships._
 
 - **Supporting paragraph (sans, two lines):**
-  TypeScript, React, Node, PostgreSQL. Currently running WeSwapCards, a production platform with 965+ users.
+  TypeScript, React, Node, PostgreSQL. Currently running WeSwapCards, a production platform with 980+ users.
 
 - **Status pill (outlined, with green dot):**
   Available · Open to hybrid roles in NYC
@@ -69,7 +69,7 @@ This file is the single source of truth for every word on the portfolio site. Do
 
 - **Metric badge (dark green slab, overlapping bottom of screenshot):**
   - Top label (small caps, mustard dot): LIVE IN PRODUCTION
-  - Body (serif): 965 users · 15K+ transactions
+  - Body (serif): 980 users · 16K+ transactions
 
 - **Decorative element:** dashed serpentine curve between the two columns (purely typographic ornament)
 
@@ -107,11 +107,11 @@ This file is the single source of truth for every word on the portfolio site. Do
 - **Title (very large serif):** WeSwapCards.
 
 - **Italic line (serif italic, 2 lines, second line mustard):**
-  Built and operated solo. Used by 965 people
+  Built and operated solo. Used by 980 people
   _to swap WeWard cards._
 
 - **Status pill (dark green fill, mustard dot):**
-  Live since Feb 2025 · 965+ members
+  Live since Feb 2025 · 980+ members
 
 - **CTAs:**
   - Primary (mustard fill): Visit live site
@@ -132,8 +132,8 @@ This file is the single source of truth for every word on the portfolio site. Do
     I built it because no good tool existed for the WeWard community. Collectors were coordinating swaps across scattered group chats and losing track of who had what. WeSwapCards gave them one place to find each other, talk, and trade. A year later, WeWard launched the same feature inside their own app.
 
 - **Metrics strip (three numbers in serif with small-caps labels, separated by hairline rules):**
-  - 965+ MEMBERS
-  - 15K+ TRADES COORDINATED
+  - 980+ MEMBERS
+  - 16K+ TRADES COORDINATED
   - 200K+ MESSAGES EXCHANGED
 
 - **Italic engagement line (serif italic, below the metrics strip, smaller than headings):**

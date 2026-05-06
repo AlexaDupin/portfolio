@@ -27,7 +27,7 @@ export default function Home() {
             {/* Supporting paragraph */}
             <p className="text-green font-sans text-base leading-relaxed">
               TypeScript, React, Node, PostgreSQL. Currently running WeSwapCards, a production
-              platform with 965+ users.
+              platform with 980+ users.
             </p>
 
             {/* Status pill */}
@@ -81,7 +81,7 @@ export default function Home() {
                 </span>
               </div>
               <p className="text-cream font-serif text-lg whitespace-nowrap">
-                965 users · 15K+ transactions
+                980 users · 16K+ transactions
               </p>
             </div>
           </Link>
