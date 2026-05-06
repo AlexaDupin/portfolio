@@ -314,14 +314,40 @@ This section is a dark slab (dark green fill) sitting after the reflection. Whit
 
 ## About page (/about)
 
-Status: not yet drafted. Placeholder copy for v1 launch:
+### Eyebrow
 
-- **Heading:** About.
-- **Body:**
-  13 years in international product, now building production software in TypeScript and React. Authorized to work in the US.
-- **CTA:** Connect on LinkedIn
+ABOUT
 
-Replace with full draft in v2.
+### Hero — typographic statement
+
+Three-line large serif. Italic mustard starts mid-line on line 2 and continues through line 3.
+
+- Line 1 (regular, dark green): `I build production software in TypeScript,`
+- Line 2 (regular, dark green): `React, and Node. ` followed by italic mustard: `Before that, 13 years`
+- Line 3 (italic, mustard): `in international product at Booking.com.`
+
+### Body prose
+
+Two paragraphs, single column, Inter sans, dark green.
+
+**Paragraph 1:**
+I'm a full-stack engineer working in TypeScript, React, Node, and PostgreSQL. WeSwapCards has been the center of my technical work for the last year and a half. Designing the architecture was the start. Operating it has taught me the rest.
+
+**Paragraph 2:**
+Before this, I spent thirteen years as a Localization Specialist at Booking.com, where my work touched the systems that served millions of users in dozens of markets. I came to engineering through software development training, and most of what I bring beyond the code itself comes from the years I spent watching and contributing to how a global product actually works.
+
+### Practical details
+
+- **Eyebrow:** PRACTICAL DETAILS
+- **Statement (serif, two lines):**
+  - Line 1: `Based in Brooklyn, NY. Open to hybrid roles in the`
+  - Line 2: `New York area. ` followed by italic mustard: `No sponsorship required.`
+
+### Contact
+
+- **Eyebrow:** CONTACT
+- **Statement (serif, single line):** `The best way to reach me is on LinkedIn.`
+- **CTA button (mustard fill, dark green text):** `Connect on LinkedIn →` linking to `https://www.linkedin.com/in/alexa-dupin` (new tab)
 
 ---
 
