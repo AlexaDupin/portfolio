@@ -9,12 +9,10 @@ export default function AboutPage() {
 
       {/* Hero typographic statement */}
       <p className="text-green mt-12 font-serif text-4xl leading-tight md:text-5xl">
-        I build production software in TypeScript,
-        <br className="hidden md:inline" />
+        I build production software in TypeScript, <br className="hidden xl:inline" />
         React, and Node.{" "}
         <span className="text-mustard italic">
-          Before that, 13 years
-          <br className="hidden md:inline" />
+          Before that, 13 years <br className="hidden xl:inline" />
           in international product at Booking.com.
         </span>
       </p>
