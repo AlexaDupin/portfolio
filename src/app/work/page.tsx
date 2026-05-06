@@ -28,6 +28,7 @@ export default function WorkPage() {
           screenshot={{
             src: "/screenshots/native-find.png",
             alt: "WeSwapCards Mobile find screen",
+            orientation: "portrait",
           }}
         />
         <ProjectCard

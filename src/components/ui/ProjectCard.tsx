@@ -15,7 +15,11 @@ interface ProjectCardProps {
   stack: string[];
   footerLabel?: string;
   href: string;
-  screenshot?: { src: string; alt: string };
+  screenshot?: {
+    src: string;
+    alt: string;
+    orientation?: "landscape" | "portrait";
+  };
 }
 
 export default function ProjectCard({
@@ -31,17 +35,33 @@ export default function ProjectCard({
     "flex h-full flex-col rounded-2xl border border-green/10 bg-card transition-all duration-200 hover:scale-[1.02] hover:border-green/25"
   );
 
+  const screenshotEl = screenshot ? (
+    screenshot.orientation === "portrait" ? (
+      <div className="bg-green/[0.08] flex aspect-video items-center justify-center rounded-t-2xl">
+        <div className="border-green/25 aspect-[9/16] h-[82%] overflow-hidden rounded-2xl border">
+          <Image
+            src={screenshot.src}
+            alt={screenshot.alt}
+            width={450}
+            height={800}
+            className="h-full w-full object-cover"
+          />
+        </div>
+      </div>
+    ) : (
+      <Image
+        src={screenshot.src}
+        alt={screenshot.alt}
+        width={800}
+        height={450}
+        className="h-auto w-full rounded-t-2xl object-cover"
+      />
+    )
+  ) : null;
+
   const inner = (
     <>
-      {screenshot && (
-        <Image
-          src={screenshot.src}
-          alt={screenshot.alt}
-          width={800}
-          height={450}
-          className="h-auto w-full rounded-t-2xl object-cover"
-        />
-      )}
+      {screenshotEl}
       <div className="flex flex-1 flex-col gap-4 p-7">
         <StatusPill variant={status.variant} label={status.label} />
         <div className="flex flex-col gap-3">
