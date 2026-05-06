@@ -38,13 +38,13 @@ export default function ProjectCard({
   const screenshotEl = screenshot ? (
     screenshot.orientation === "portrait" ? (
       <div className="bg-green/[0.08] flex aspect-video items-center justify-center rounded-t-2xl">
-        <div className="border-green/25 aspect-[9/16] h-[82%] overflow-hidden rounded-2xl border">
+        <div className="border-green/25 relative aspect-[9/16] h-[82%] overflow-hidden rounded-2xl border">
           <Image
             src={screenshot.src}
             alt={screenshot.alt}
-            width={450}
-            height={800}
-            className="h-full w-full object-cover"
+            fill
+            sizes="(max-width: 768px) 50vw, 200px"
+            className="object-cover"
           />
         </div>
       </div>
