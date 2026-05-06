@@ -17,6 +17,7 @@ export default function WorkPage() {
           body="A production platform where collectors of WeWard cards find swap partners and trade. Built and operated solo. Live since February 2025."
           stack={["React", "Node", "PostgreSQL", "Clerk"]}
           href="/work/weswapcards"
+          screenshot={{ src: "/screenshots/wsc-home.jpg", alt: "WeSwapCards homepage" }}
         />
         <ProjectCard
           status={{ label: "IN PROGRESS", variant: "filled" }}
@@ -24,6 +25,10 @@ export default function WorkPage() {
           body="A React Native rewrite in TypeScript with stricter type checking and a state-machine auth model. Same backend, new client."
           stack={["React Native", "TypeScript", "Expo Router"]}
           href="/work/weswapcards-mobile"
+          screenshot={{
+            src: "/screenshots/native-find.png",
+            alt: "WeSwapCards Mobile find screen",
+          }}
         />
         <ProjectCard
           status={{ label: "PORTFOLIO", variant: "outlined" }}
@@ -32,6 +37,7 @@ export default function WorkPage() {
           stack={["React", "Node", "PostgreSQL", "JWT"]}
           footerLabel="Case study coming soon"
           href="/work/actiively"
+          screenshot={{ src: "/screenshots/actiively-results.jpg", alt: "Actiively results page" }}
         />
       </div>
     </main>
