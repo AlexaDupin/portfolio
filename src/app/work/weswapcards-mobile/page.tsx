@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import { StatusPill } from "@/components/ui/StatusPill";
+
+export const metadata: Metadata = {
+  title: "WeSwapCards Mobile",
+  description:
+    "A React Native rewrite in TypeScript with stricter type checking and a state-machine auth model.",
+  robots: { index: false, follow: true },
+};
 
 export default function WeSwapCardsMobilePage() {
   return (

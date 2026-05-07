@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
 import ProjectCard from "@/components/ui/ProjectCard";
+
+export const metadata: Metadata = {
+  title: "Work",
+  description: "Selected projects across web, mobile, and team-built portfolio work.",
+};
 
 export default function WorkPage() {
   return (

@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "Full-stack engineer in New York. Thirteen years of international product experience at Booking.com before software development.",
+};
+
 export default function AboutPage() {
   return (
     <main className="mx-auto max-w-6xl px-6 py-20 md:py-28">

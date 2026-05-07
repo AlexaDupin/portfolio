@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import { StatusPill } from "@/components/ui/StatusPill";
+
+export const metadata: Metadata = {
+  title: "Actiively",
+  description:
+    "A full-stack web app built in a four-person team. Frontend, backend, database, JWT auth, and a Gitflow-driven agile process.",
+};
 
 export default function ActiivelyPage() {
   return (

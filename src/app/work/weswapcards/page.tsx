@@ -1,7 +1,15 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ExpandCard } from "@/components/ui/ExpandCard";
 import { StatusPill } from "@/components/ui/StatusPill";
+
+export const metadata: Metadata = {
+  title: "WeSwapCards case study",
+  description:
+    "A production platform built and operated solo. 980+ users, 15K+ trades, live since February 2025.",
+  robots: { index: false, follow: true },
+};
 
 export default function WeSwapCardsPage() {
   return (
