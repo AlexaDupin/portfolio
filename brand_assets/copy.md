@@ -36,6 +36,7 @@ This file is the single source of truth for every word on the portfolio site. Do
 
 - **Left:** Brooklyn, NY · Available for hybrid roles
 - **Left, second line, smaller:** © 2026 Alexa Dupin
+- **Left, third line, smallest and most faded (colophon):** Built with Next.js, Tailwind, and Claude Code.
 - **Right:** LinkedIn · GitHub
 
 ---
@@ -45,32 +46,24 @@ This file is the single source of truth for every word on the portfolio site. Do
 ### Hero
 
 - **Eyebrow (small caps, letter-spaced):** ALEXA DUPIN · BROOKLYN, NY
-
 - **Headline (3 lines, large serif, third line italic mustard):**
   Full-stack
   engineer who
   _ships._
-
 - **Supporting paragraph (sans, two lines):**
   TypeScript, React, Node, PostgreSQL. Currently running WeSwapCards, a production platform with 980+ users.
-
 - **Status pill (outlined, with green dot):**
   Available · Open to hybrid roles in NYC
-
 - **CTAs:**
   - Primary (mustard fill): See my work →
   - Secondary (outlined): Connect on LinkedIn
-
 - **Text-link row (small, faded, below CTAs):**
   GitHub · LinkedIn
-
 - **Right column visual:**
   WeSwapCards screenshot in a browser frame (URL bar reads "weswapcards.com")
-
 - **Metric badge (dark green slab, overlapping bottom of screenshot):**
   - Top label (small caps, mustard dot): LIVE IN PRODUCTION
   - Body (serif): 980 users · 16K+ transactions
-
 - **Decorative element:** dashed serpentine curve between the two columns (purely typographic ornament)
 
 ### Other Work section
@@ -90,7 +83,7 @@ This file is the single source of truth for every word on the portfolio site. Do
 
 - **Status pill:** PORTFOLIO (outlined)
 - **Title (serif):** Actiively.
-- **Body:** A full-stack web app built as a portfolio piece during my development training. Frontend, backend, database, and JWT auth.
+- **Body:** A full-stack web app built in a four-person team. Frontend, backend, database, JWT auth, and a Gitflow-driven agile process.
 - **Stack chips:** React · Node · PostgreSQL · JWT
 - **Footer label (small, faded, below stack chips):** Case study coming soon
 - **Card click target:** GitHub repo (until case study ships, then update to `/work/actiively`)
@@ -103,46 +96,36 @@ This file is the single source of truth for every word on the portfolio site. Do
 
 - **Eyebrow left (with mustard rule):** 01 · CASE STUDY
 - **Eyebrow right (faded):** PROJECT · FULL STACK
-
 - **Title (very large serif):** WeSwapCards.
-
 - **Italic line (serif italic, 2 lines, second line mustard):**
   Built and operated solo. Used by 980 people
   _to swap WeWard cards._
-
 - **Status pill (dark green fill, mustard dot):**
   Live since Feb 2025 · 980+ members
-
 - **CTAs:**
   - Primary (mustard fill): Visit live site
   - Secondary (outlined): View on GitHub
-
 - **Below CTAs:** Hero screenshot of WeSwapCards in a browser frame
 
 ### Section 2 — Overview
 
 - **Eyebrow:** 02 · OVERVIEW
 - **Heading (serif):** A real product, not a portfolio piece.
-
 - **Two columns of body prose:**
   - **Left column:**
     WeSwapCards is a platform where collectors of WeWard cards find swap partners, message about trades, and track progress toward complete sets. It launched in February 2025 after four months of development.
-
   - **Right column:**
     I built it because no good tool existed for the WeWard community. Collectors were coordinating swaps across scattered group chats and losing track of who had what. WeSwapCards gave them one place to find each other, talk, and trade. A year later, WeWard launched the same feature inside their own app.
-
 - **Metrics strip (three numbers in serif with small-caps labels, separated by hairline rules):**
   - 980+ MEMBERS
   - 16K+ TRADES COORDINATED
   - 200K+ MESSAGES EXCHANGED
-
 - **Italic engagement line (serif italic, below the metrics strip, smaller than headings):**
   _Averaged 317 monthly active users from July 2025 to February 2026, peaking at 334 in January 2026, the month before WeWard launched a competing feature inside their own app._
 
 ### Section 3 — My Role
 
 - **Eyebrow:** 03 · MY ROLE
-
 - **Italic body (large serif italic, 3 lines, prominent):**
   _I designed, built, and operate WeSwapCards solo:_
   _architecture, frontend, backend, database, auth,_
@@ -152,9 +135,13 @@ This file is the single source of truth for every word on the portfolio site. Do
 
 - **Eyebrow:** 04 · ARCHITECTURE
 - **Heading (serif):** A clean separation of concerns.
-
 - **Body:**
-  A React frontend talks to an Express REST API backed by PostgreSQL, with Clerk handling authentication. The shape is deliberately conventional. The decisions worth talking about live in the highlights below.
+  A React frontend talks to an Express REST API backed by PostgreSQL, with Clerk handling authentication. The shape is deliberately conventional.
+
+- **API load strip (mini metric block, between the body paragraph and the stack graphic):**
+  - **Eyebrow (small caps, letter-spaced, faded):** API LOAD
+  - **Numbers row (serif, large, separated by hairline rule or middle dot):** **35K+** DAILY CALLS  ·  **1M+** PEAK MONTHLY REQUESTS
+  - **Italic context line (smaller, opacity ~0.7):** _Sustained across a year in production._
 
 - **Layered stack graphic (three horizontal bands stacked vertically, each labeled):**
   - **Frontend (purple band):** React 18, React Router 6, Context + useReducer
@@ -166,7 +153,6 @@ This file is the single source of truth for every word on the portfolio site. Do
 - **Eyebrow:** 05 · TECHNICAL HIGHLIGHTS
 - **Heading (serif):** Three decisions worth a closer look.
 - **Subheading (small, sans):** Tap any card to read the deep-dive.
-
 - **Layout:** Three-column row of cards, equal width. Each card expands in place on click (or links to a sub-page) to reveal the deep-dive content. Card itself is the click target.
 
 #### Card 01 — Production ops
@@ -290,7 +276,6 @@ UI components don't consume context directly. Feature logic lives in `useXLogic`
 ### Section 6 — Reflection
 
 - **Eyebrow:** 06 · REFLECTION
-
 - **Italic body (large serif italic, prominent):**
   _A year of operating WeSwapCards taught me where I'd build differently. I started with Sqitch migrations and drifted off them; the conversation and message tables exist only in the database now, not in version control. Testing was an afterthought I keep meaning to come back to. None of it is breaking anything in production, but each one is something I'd do from day one if I rebuilt it. Activity has dropped since WeWard launched their native version, and the mobile rebuild I'm working on now is partly a response: making the experience good enough on a different surface to compete on different terms._
 
@@ -328,12 +313,15 @@ Three-line large serif. Italic mustard starts mid-line on line 2 and continues t
 
 ### Body prose
 
-Two paragraphs, single column, Inter sans, dark green.
+Three paragraphs, single column, Inter sans, dark green.
 
 **Paragraph 1:**
 I'm a full-stack engineer working in TypeScript, React, Node, and PostgreSQL. WeSwapCards has been the center of my technical work for the last year and a half. Designing the architecture was the start. Operating it has taught me the rest.
 
 **Paragraph 2:**
+My workflow uses Claude Code as a regular part of how I build. It changes what I can ship in a day. It doesn't change what I have to decide.
+
+**Paragraph 3:**
 Before this, I spent thirteen years as a Localization Specialist at Booking.com, where my work touched the systems that served millions of users in dozens of markets. I came to engineering through software development training, and most of what I bring beyond the code itself comes from the years I spent watching and contributing to how a global product actually works.
 
 ### Practical details
@@ -467,7 +455,7 @@ Reuses the exact card from the Homepage Other Work section.
 
 - **Status pill:** PORTFOLIO (outlined)
 - **Title (serif):** Actiively.
-- **Body:** A full-stack web app built as a portfolio piece during my development training. Frontend, backend, database, and JWT auth.
+- **Body:** A full-stack web app built in a four-person team. Frontend, backend, database, JWT auth, and a Gitflow-driven agile process.
 - **Stack chips:** React · Node · PostgreSQL · JWT
 - **Footer label (small, faded, below stack chips):** Case study coming soon
 - **Card click target:** `/work/actiively`

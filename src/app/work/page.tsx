@@ -34,7 +34,7 @@ export default function WorkPage() {
         <ProjectCard
           status={{ label: "PORTFOLIO", variant: "outlined" }}
           title="Actiively."
-          body="A full-stack web app built as a portfolio piece during my development training. Frontend, backend, database, and JWT auth."
+          body="A full-stack web app built in a four-person team. Frontend, backend, database, JWT auth, and a Gitflow-driven agile process."
           stack={["React", "Node", "PostgreSQL", "JWT"]}
           footerLabel="Case study coming soon"
           href="/work/actiively"
