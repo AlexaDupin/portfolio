@@ -5,6 +5,9 @@ export default function Footer() {
         <div>
           <p className="text-green font-sans text-sm">Brooklyn, NY · Available for hybrid roles</p>
           <p className="text-green/50 mt-1 font-sans text-xs">© 2026 Alexa Dupin</p>
+          <p className="text-green/30 mt-1 font-sans text-xs">
+            Built with Next.js, Tailwind, and Claude Code.
+          </p>
         </div>
 
         <div className="flex gap-6">
