@@ -192,6 +192,34 @@ export default function WeSwapCardsPage() {
             authentication. The shape is deliberately conventional.
           </p>
 
+          {/* API Load strip */}
+          <div className="mt-12">
+            <p className="text-green/60 font-sans text-[10px] tracking-widest uppercase">
+              API LOAD
+            </p>
+            <div className="divide-green/15 mt-4 flex flex-col divide-y md:flex-row md:items-center md:divide-x md:divide-y-0">
+              <div className="flex items-baseline gap-2 py-5 md:py-4 md:pr-10">
+                <p className="text-green font-serif text-4xl leading-none">
+                  35K<span className="text-mustard italic">+</span>
+                </p>
+                <p className="text-green/70 font-sans text-xs tracking-widest uppercase">
+                  Daily Calls
+                </p>
+              </div>
+              <div className="flex items-baseline gap-2 py-5 md:py-4 md:pl-10">
+                <p className="text-green font-serif text-4xl leading-none">
+                  1M<span className="text-mustard italic">+</span>
+                </p>
+                <p className="text-green/70 font-sans text-xs tracking-widest uppercase">
+                  Peak Monthly Requests
+                </p>
+              </div>
+            </div>
+            <p className="text-green/70 mt-5 font-serif text-sm italic">
+              Sustained across a year in production.
+            </p>
+          </div>
+
           {/* Stack diagram */}
           <div className="mt-12 flex flex-col gap-5">
             {/* Frontend */}
