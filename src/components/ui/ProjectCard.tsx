@@ -20,6 +20,7 @@ interface ProjectCardProps {
     alt: string;
     orientation?: "landscape" | "portrait";
   };
+  headingLevel?: "h2" | "h3";
 }
 
 export default function ProjectCard({
@@ -30,7 +31,9 @@ export default function ProjectCard({
   footerLabel,
   href,
   screenshot,
+  headingLevel,
 }: ProjectCardProps) {
+  const Heading = headingLevel ?? "h3";
   const className = clsx(
     "flex h-full flex-col rounded-2xl border border-green/10 bg-card transition-all duration-200 hover:scale-[1.02] hover:border-green/25"
   );
@@ -67,7 +70,7 @@ export default function ProjectCard({
       <div className="flex flex-1 flex-col gap-4 p-7">
         <StatusPill variant={status.variant} label={status.label} />
         <div className="flex flex-col gap-3">
-          <h3 className="text-green font-serif text-2xl">{title}</h3>
+          <Heading className="text-green font-serif text-2xl">{title}</Heading>
           <p className="text-green font-sans text-sm leading-relaxed">{body}</p>
         </div>
         <div className="mt-auto flex flex-col gap-3">
@@ -81,7 +84,7 @@ export default function ProjectCard({
               </span>
             ))}
           </div>
-          {footerLabel && <p className="text-mustard font-sans text-xs italic">{footerLabel}</p>}
+          {footerLabel && <p className="text-mustard font-sans text-sm italic">{footerLabel}</p>}
         </div>
       </div>
     </>

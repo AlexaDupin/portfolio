@@ -4,8 +4,8 @@ export default function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-8 md:flex-row md:items-end md:justify-between">
         <div>
           <p className="text-green font-sans text-sm">Brooklyn, NY · Available for hybrid roles</p>
-          <p className="text-green/50 mt-1 font-sans text-xs">© 2026 Alexa Dupin</p>
-          <p className="text-green/30 mt-1 font-sans text-xs">
+          <p className="text-green/65 mt-1 font-sans text-xs">© 2026 Alexa Dupin</p>
+          <p className="text-green/55 mt-1 font-sans text-xs">
             Built with Next.js, Tailwind, and Claude Code.
           </p>
         </div>

@@ -24,6 +24,7 @@ export default function WorkPage() {
           stack={["React", "Node", "PostgreSQL", "Clerk"]}
           href="/work/weswapcards"
           screenshot={{ src: "/screenshots/wsc-home.jpg", alt: "WeSwapCards homepage" }}
+          headingLevel="h2"
         />
         <ProjectCard
           status={{ label: "IN PROGRESS", variant: "filled" }}
@@ -36,6 +37,7 @@ export default function WorkPage() {
             alt: "WeSwapCards Mobile find screen",
             orientation: "portrait",
           }}
+          headingLevel="h2"
         />
         <ProjectCard
           status={{ label: "PORTFOLIO", variant: "outlined" }}
@@ -45,6 +47,7 @@ export default function WorkPage() {
           footerLabel="Case study coming soon"
           href="/work/actiively"
           screenshot={{ src: "/screenshots/actiively-results.jpg", alt: "Actiively results page" }}
+          headingLevel="h2"
         />
       </div>
     </main>
