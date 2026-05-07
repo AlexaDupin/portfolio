@@ -19,7 +19,7 @@ export function ExpandCard({ number, eyebrow, title, summary, children }: Expand
     <div
       className={cn(
         "bg-card rounded-2xl border p-7 transition-colors duration-200",
-        open ? "border-green/20" : "border-green/10 hover:border-green/20"
+        open ? "border-green/20" : "border-green/10 hover:border-green/20 cursor-pointer"
       )}
     >
       <button onClick={() => setOpen((o) => !o)} aria-expanded={open} className="w-full text-left">
