@@ -1,4 +1,17 @@
+import { Fragment } from "react";
 import type { Metadata } from "next";
+import { cn } from "@/lib/utils";
+
+const stackRows = [
+  { label: "LANGUAGES", items: "TypeScript, JavaScript" },
+  { label: "FRONTEND", items: "React, React Native, Next.js, Tailwind" },
+  { label: "BACKEND", items: "Node.js, Express, REST APIs" },
+  { label: "DATA", items: "PostgreSQL, Sequelize" },
+  { label: "AUTH", items: "Clerk, JWT" },
+  { label: "DEPLOYMENT", items: "Render, Vercel, Supabase, Cloudinary" },
+  { label: "AI-AUGMENTED DEVELOPMENT", items: "Claude Code, Cursor, ChatGPT" },
+  { label: "TOOLING", items: "Git, Gitflow, Jest, Jira, Agile/Scrum" },
+];
 
 export const metadata: Metadata = {
   title: "About",
@@ -42,6 +55,36 @@ export default function AboutPage() {
           code itself comes from the years I spent watching and contributing to how a global product
           actually works.
         </p>
+      </div>
+
+      {/* Divider */}
+      <div className="bg-green/10 mt-16 h-px" />
+
+      {/* What I work with */}
+      <div className="mt-16 max-w-2xl">
+        <div className="flex items-center gap-4">
+          <div className="bg-mustard h-0.5 w-12" />
+          <span className="text-green font-sans text-xs tracking-widest uppercase">
+            WHAT I WORK WITH
+          </span>
+        </div>
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-[180px_1fr] md:gap-x-8 md:gap-y-4">
+          {stackRows.map(({ label, items }, i) => (
+            <Fragment key={label}>
+              <div
+                className={cn(
+                  "text-green/70 font-sans text-xs tracking-widest uppercase md:self-start",
+                  i > 0 && "mt-4 md:mt-0"
+                )}
+              >
+                {label}
+              </div>
+              <div className="text-green mt-1 font-sans text-sm leading-relaxed md:mt-0">
+                {items}
+              </div>
+            </Fragment>
+          ))}
+        </div>
       </div>
 
       {/* Divider */}
