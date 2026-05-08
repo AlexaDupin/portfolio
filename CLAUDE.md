@@ -113,3 +113,5 @@ Examples:
 
 - `feat(nav): add shared nav component`
 - `fix(hero): correct mobile breakpoint for two-column layout`
+
+Automatically push when commit is approved.
