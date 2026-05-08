@@ -324,6 +324,23 @@ My workflow uses Claude Code as a regular part of how I build. It changes what I
 **Paragraph 3:**
 Before this, I spent thirteen years as a Localization Specialist at Booking.com, where my work touched the systems that served millions of users in dozens of markets. I came to engineering through software development training, and most of what I bring beyond the code itself comes from the years I spent watching and contributing to how a global product actually works.
 
+### What I work with
+
+- **Eyebrow:** WHAT I WORK WITH
+
+A category list in two columns on desktop (label column narrow, items column wide), stacked on mobile (label above items). Each label is small-caps tracked Inter, dark green at ~70% opacity. Each items line is Inter sans, dark green, comma-separated.
+
+Rows, in this order:
+
+- **LANGUAGES** — TypeScript, JavaScript
+- **FRONTEND** — React, React Native, Next.js, Tailwind
+- **BACKEND** — Node.js, Express, REST APIs
+- **DATA** — PostgreSQL, Sequelize
+- **AUTH** — Clerk, JWT
+- **DEPLOYMENT** — Render, Vercel, Supabase, Cloudinary
+- **AI-AUGMENTED DEVELOPMENT** — Claude Code, Cursor, ChatGPT
+- **TOOLING** — Git, Gitflow, Jest, Jira, Agile/Scrum
+
 ### Practical details
 
 - **Eyebrow:** PRACTICAL DETAILS
