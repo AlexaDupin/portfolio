@@ -18,7 +18,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://alexadupin.com"),
+  metadataBase: new URL("https://alexadupin.vercel.app"),
   title: {
     default: "Alexa Dupin · Full-stack engineer",
     template: "%s · Alexa Dupin",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: "Alexa Dupin · Full-stack engineer",
     description:
       "Full-stack engineer in New York. Currently running a production platform with 980+ users.",
-    url: "https://alexadupin.com",
+    url: "https://alexadupin.vercel.app",
     siteName: "Alexa Dupin",
     locale: "en_US",
     type: "website",
