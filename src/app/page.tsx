@@ -53,7 +53,10 @@ export default function Home() {
           </div>
 
           {/* Right column */}
-          <Link href="/work/weswapcards" className="block">
+          <Link
+            href="/work/weswapcards"
+            className="block transition-transform duration-200 hover:scale-[1.02]"
+          >
             {/* Browser frame */}
             <div className="border-green/10 hover:border-green/25 overflow-hidden rounded-lg border transition-colors">
               <div className="border-green/10 bg-green/5 flex items-center gap-1.5 border-b px-3 py-2.5">
