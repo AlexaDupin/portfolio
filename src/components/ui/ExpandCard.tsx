@@ -35,7 +35,7 @@ export function ExpandCard({ number, eyebrow, title, summary, children }: Expand
         </p>
         <p className="text-green mt-4 font-sans text-xs tracking-widest uppercase">{eyebrow}</p>
         <h3 className="text-green mt-3 font-serif text-xl leading-snug">{title}</h3>
-        <p className="text-green mt-3 font-sans text-sm leading-relaxed">{summary}</p>
+        <p className="text-green mt-3 font-sans text-base leading-relaxed">{summary}</p>
         <p className="text-mustard mt-5 font-sans text-sm">
           {open ? "Close ↑" : "Read the deep-dive →"}
         </p>

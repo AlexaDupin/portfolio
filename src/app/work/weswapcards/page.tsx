@@ -275,7 +275,7 @@ export default function WeSwapCardsPage() {
           </h2>
 
           {/* Subheading */}
-          <p className="text-green/60 mt-3 font-sans text-sm">
+          <p className="text-green/60 mt-3 font-sans text-base">
             Tap any card to read the deep-dive.
           </p>
 
@@ -288,7 +288,7 @@ export default function WeSwapCardsPage() {
               title="Debugging a Node/OpenSSL mismatch in production."
               summary="The API stopped responding. The frontend kept loading, but every request returned a Passenger error page. The crash was happening before my code ran. The fix was in the runtime, not the application."
             >
-              <p className="text-green font-sans text-sm leading-relaxed">
+              <p className="text-green font-sans text-base leading-relaxed">
                 The first sign was a Passenger error page at{" "}
                 <code className="rounded bg-[#F0EAD9] px-1.5 py-0.5 font-mono text-[13px]">
                   api.weswapcards.com
@@ -297,14 +297,14 @@ export default function WeSwapCardsPage() {
                 the problem space immediately. Whatever was wrong was happening before any of my
                 code had a chance to run.
               </p>
-              <p className="text-green font-sans text-sm leading-relaxed">
+              <p className="text-green font-sans text-base leading-relaxed">
                 o2switch exposes raw log files per subdomain. I pulled the most recent one for the
                 API and found the error pattern repeating:
               </p>
               <pre className="overflow-x-auto rounded-lg bg-[#F0EAD9] p-4 font-mono text-[13px] leading-relaxed">
                 <code>{`/opt/alt/alt-nodejs16/root/usr/bin/node:\n/opt/alt/alt-nodejs16/root/usr/lib64/libcrypto.so.1.1:\nversion \`OPENSSL_1_1_1e' not found\n(required by /opt/alt/alt-nodejs16/root/usr/lib64/libnode.so.93)`}</code>
               </pre>
-              <p className="text-green font-sans text-sm leading-relaxed">
+              <p className="text-green font-sans text-base leading-relaxed">
                 Three things stood out. The path still referenced{" "}
                 <code className="rounded bg-[#F0EAD9] px-1.5 py-0.5 font-mono text-[13px]">
                   alt-nodejs16
@@ -316,7 +316,7 @@ export default function WeSwapCardsPage() {
                 </code>{" "}
                 itself, before any JavaScript got evaluated.
               </p>
-              <p className="text-green font-sans text-sm leading-relaxed">
+              <p className="text-green font-sans text-base leading-relaxed">
                 This was an ABI mismatch. The Node binary was linked against one version of{" "}
                 <code className="rounded bg-[#F0EAD9] px-1.5 py-0.5 font-mono text-[13px]">
                   libcrypto
@@ -324,11 +324,11 @@ export default function WeSwapCardsPage() {
                 and the system had moved to another. Nothing in my Express app, my dependencies, or
                 my route handlers could have caused it or fixed it.
               </p>
-              <p className="text-green font-sans text-sm leading-relaxed">
+              <p className="text-green font-sans text-base leading-relaxed">
                 o2switch lets you choose the Node version per application from its technical panel.
                 I updated the API from Node 16 to Node 22 and restarted. Service was back up.
               </p>
-              <p className="text-green font-sans text-sm leading-relaxed">
+              <p className="text-green font-sans text-base leading-relaxed">
                 <strong>What I&apos;d do differently:</strong> Set up structured logging with Pino
                 or Winston, and external uptime monitoring, before the next runtime bump. Logs in
                 the host&apos;s file manager, manually grep&apos;d, is not a sustainable ops loop.
@@ -344,15 +344,15 @@ export default function WeSwapCardsPage() {
               title="Decoupling auth identity from domain identity."
               summary="Clerk handles authentication, but Clerk users and application users aren't the same thing. I separated them from the start. Authorization runs in four layers, joined by a single column."
             >
-              <p className="text-green font-sans text-sm leading-relaxed">
+              <p className="text-green font-sans text-base leading-relaxed">
                 A common mistake in apps that use third-party auth is to treat the auth
                 provider&apos;s user object as the application user. It works at first. Then you
                 need to swap providers, support multiple auth methods, store domain-specific user
                 data, or write tests that don&apos;t depend on the auth provider being available,
                 and the cost of the shortcut shows up.
               </p>
-              <p className="text-green font-sans text-sm leading-relaxed">The two identities:</p>
-              <ul className="text-green marker:text-mustard list-outside list-disc space-y-2 pl-5 font-sans text-sm leading-relaxed">
+              <p className="text-green font-sans text-base leading-relaxed">The two identities:</p>
+              <ul className="text-green marker:text-mustard list-outside list-disc space-y-2 pl-5 font-sans text-base leading-relaxed">
                 <li>
                   <strong>Clerk</strong> owns authentication: sessions, credentials, OAuth, password
                   resets.
@@ -369,7 +369,7 @@ export default function WeSwapCardsPage() {
                   and card collections.
                 </li>
               </ul>
-              <p className="text-green font-sans text-sm leading-relaxed">
+              <p className="text-green font-sans text-base leading-relaxed">
                 They&apos;re joined by{" "}
                 <code className="rounded bg-[#F0EAD9] px-1.5 py-0.5 font-mono text-[13px]">
                   explorer.userid
@@ -377,16 +377,16 @@ export default function WeSwapCardsPage() {
                 , which holds the Clerk UID. The consequence: Clerk could be replaced with another
                 provider by changing what populates that column. Domain logic doesn&apos;t move.
               </p>
-              <p className="text-green font-sans text-sm leading-relaxed">
+              <p className="text-green font-sans text-base leading-relaxed">
                 Authorization runs in four layers:
               </p>
               <pre className="overflow-x-auto rounded-lg bg-[#F0EAD9] p-4 font-mono text-[13px] leading-relaxed">
                 <code>{`app.use(clerkMiddleware()); // populates req.auth\nrouter.post('/login/user', requireAuth(), handler); // unauthenticated → reject\nconst explorer = await getExplorerIdByClerkId(req.auth.userId);\nif (explorer.id !== Number(req.params.explorerId))\n  // ownership check\n  return res.status(403).end();\n// + DB unique constraints as the final guard`}</code>
               </pre>
-              <p className="text-green font-sans text-sm leading-relaxed">
+              <p className="text-green font-sans text-base leading-relaxed">
                 Two pieces of this design I&apos;m proud of:
               </p>
-              <p className="text-green font-sans text-sm leading-relaxed">
+              <p className="text-green font-sans text-base leading-relaxed">
                 A <strong>Clerk webhook</strong> with Svix signature verification handles{" "}
                 <code className="rounded bg-[#F0EAD9] px-1.5 py-0.5 font-mono text-[13px]">
                   user.deleted
@@ -397,7 +397,7 @@ export default function WeSwapCardsPage() {
                 </code>{" "}
                 is deleted, preventing orphan domain data.
               </p>
-              <p className="text-green font-sans text-sm leading-relaxed">
+              <p className="text-green font-sans text-base leading-relaxed">
                 A frontend route guard called{" "}
                 <code className="rounded bg-[#F0EAD9] px-1.5 py-0.5 font-mono text-[13px]">
                   RequireUsername
@@ -406,7 +406,7 @@ export default function WeSwapCardsPage() {
                 every protected route. If signup is interrupted partway through, the system recovers
                 on the next navigation rather than silently breaking.
               </p>
-              <p className="text-green font-sans text-sm leading-relaxed">
+              <p className="text-green font-sans text-base leading-relaxed">
                 <strong>What I&apos;d do differently:</strong> The duplicate-UID branch in the
                 registration flow is a{" "}
                 <code className="rounded bg-[#F0EAD9] px-1.5 py-0.5 font-mono text-[13px]">
@@ -428,7 +428,7 @@ export default function WeSwapCardsPage() {
               title="Lifting identity and session state to App-level Context."
               summary="State was scattered across components. I migrated to an App-level store on Context and useReducer, deliberately not Redux. The discipline is in what's global and what isn't."
             >
-              <p className="text-green font-sans text-sm leading-relaxed">
+              <p className="text-green font-sans text-base leading-relaxed">
                 The deliberate call was not to introduce Redux. The global slice I actually needed
                 was small: two namespaces (
                 <code className="rounded bg-[#F0EAD9] px-1.5 py-0.5 font-mono text-[13px]">
@@ -442,7 +442,7 @@ export default function WeSwapCardsPage() {
                 middleware ecosystem, RTK Query) are real but priced for applications with much
                 larger global state than mine.
               </p>
-              <p className="text-green font-sans text-sm leading-relaxed">
+              <p className="text-green font-sans text-base leading-relaxed">
                 The known tax with Context is re-renders. Every consumer re-renders when any part of
                 the value changes. I solved it by splitting state and dispatch into two separate
                 contexts:
@@ -450,10 +450,10 @@ export default function WeSwapCardsPage() {
               <pre className="overflow-x-auto rounded-lg bg-[#F0EAD9] p-4 font-mono text-[13px] leading-relaxed">
                 <code>{`<StateContext.Provider value={state}>\n  <DispatchContext.Provider value={dispatch}>\n    <AuthWatcher />\n    <BootAuthLoader hasExplorer={hasExplorer} />\n    {children}\n  </DispatchContext.Provider>\n</StateContext.Provider>`}</code>
               </pre>
-              <p className="text-green font-sans text-sm leading-relaxed">
+              <p className="text-green font-sans text-base leading-relaxed">
                 Components that only dispatch, the majority, never re-render when state changes.
               </p>
-              <p className="text-green font-sans text-sm leading-relaxed">
+              <p className="text-green font-sans text-base leading-relaxed">
                 The discipline is in what&apos;s global and what isn&apos;t.
               </p>
               <table className="w-full border-collapse font-sans text-sm">
@@ -501,7 +501,7 @@ export default function WeSwapCardsPage() {
                   </tr>
                 </tbody>
               </table>
-              <p className="text-green font-sans text-sm leading-relaxed">
+              <p className="text-green font-sans text-base leading-relaxed">
                 State that crosses routes goes global. State scoped to a single feature stays in
                 that feature. Ephemeral UI stays in{" "}
                 <code className="rounded bg-[#F0EAD9] px-1.5 py-0.5 font-mono text-[13px]">
@@ -509,7 +509,7 @@ export default function WeSwapCardsPage() {
                 </code>
                 . Nothing in the global store is a data cache.
               </p>
-              <p className="text-green font-sans text-sm leading-relaxed">
+              <p className="text-green font-sans text-base leading-relaxed">
                 UI components don&apos;t consume context directly. Feature logic lives in{" "}
                 <code className="rounded bg-[#F0EAD9] px-1.5 py-0.5 font-mono text-[13px]">
                   useXLogic
@@ -525,7 +525,7 @@ export default function WeSwapCardsPage() {
                 ), and only those hooks touch the store. UI receives plain values and callbacks. The
                 store could be swapped for Zustand or Redux by editing the logic hooks alone.
               </p>
-              <p className="text-green font-sans text-sm leading-relaxed">
+              <p className="text-green font-sans text-base leading-relaxed">
                 <strong>What I&apos;d do differently:</strong> The migration left a few leftovers.
                 An unused{" "}
                 <code className="rounded bg-[#F0EAD9] px-1.5 py-0.5 font-mono text-[13px]">

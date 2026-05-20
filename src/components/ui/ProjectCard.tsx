@@ -71,7 +71,7 @@ export default function ProjectCard({
         <StatusPill variant={status.variant} label={status.label} />
         <div className="flex flex-col gap-3">
           <Heading className="text-green font-serif text-2xl">{title}</Heading>
-          <p className="text-green font-sans text-sm leading-relaxed">{body}</p>
+          <p className="text-green font-sans text-base leading-relaxed">{body}</p>
         </div>
         <div className="mt-auto flex flex-col gap-3">
           <div className="flex flex-wrap gap-2">
