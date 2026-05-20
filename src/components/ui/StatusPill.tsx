@@ -13,7 +13,7 @@ export function StatusPill({ label, variant, className }: StatusPillProps) {
     return (
       <span
         className={cn(
-          "border-green/60 text-green inline-flex items-center gap-2 self-start rounded-full border px-4 py-2 font-sans text-sm",
+          "border-green/60 text-green inline-flex items-center gap-2 self-start rounded-full border px-4 py-2 font-sans text-base",
           className
         )}
       >

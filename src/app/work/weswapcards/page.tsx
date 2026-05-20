@@ -55,7 +55,7 @@ export default function WeSwapCardsPage() {
             href="https://weswapcards.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-mustard text-green rounded px-6 py-3 font-sans text-sm transition-opacity hover:opacity-90"
+            className="bg-mustard text-green rounded px-6 py-3 font-sans text-base transition-opacity hover:opacity-90"
           >
             Visit live site
           </a>
@@ -63,7 +63,7 @@ export default function WeSwapCardsPage() {
             href="https://github.com/AlexaDupin/WeSwapCards"
             target="_blank"
             rel="noopener noreferrer"
-            className="border-green text-green hover:bg-green/5 rounded border px-6 py-3 font-sans text-sm transition-colors"
+            className="border-green text-green hover:bg-green/5 rounded border px-6 py-3 font-sans text-base transition-colors"
           >
             View on GitHub
           </a>
@@ -232,24 +232,24 @@ export default function WeSwapCardsPage() {
           <div className="mt-12 flex flex-col gap-5">
             {/* Frontend */}
             <div className="rounded-lg border border-[#534AB7] bg-[#EEEDFE] px-6 py-5 md:px-8">
-              <p className="font-sans text-[15px] leading-tight font-medium text-[#26215C]">
+              <p className="font-sans text-base leading-tight font-medium text-[#26215C]">
                 Frontend
               </p>
-              <p className="mt-1 font-sans text-[13px] leading-tight text-[#3C3489]">
+              <p className="mt-1 font-sans text-sm leading-tight text-[#3C3489]">
                 React 18, React Router 6, Context + useReducer
               </p>
             </div>
             {/* API */}
             <div className="rounded-lg border border-[#0F6E56] bg-[#E1F5EE] px-6 py-5 md:px-8">
-              <p className="font-sans text-[15px] leading-tight font-medium text-[#04342C]">API</p>
-              <p className="mt-1 font-sans text-[13px] leading-tight text-[#085041]">
+              <p className="font-sans text-base leading-tight font-medium text-[#04342C]">API</p>
+              <p className="mt-1 font-sans text-sm leading-tight text-[#085041]">
                 Node 22, Express 4, Clerk authentication middleware
               </p>
             </div>
             {/* Data */}
             <div className="rounded-lg border border-[#5F5E5A] bg-[#F1EFE8] px-6 py-5 md:px-8">
-              <p className="font-sans text-[15px] leading-tight font-medium text-[#2C2C2A]">Data</p>
-              <p className="mt-1 font-sans text-[13px] leading-tight text-[#444441]">
+              <p className="font-sans text-base leading-tight font-medium text-[#2C2C2A]">Data</p>
+              <p className="mt-1 font-sans text-sm leading-tight text-[#444441]">
                 PostgreSQL, pg driver
               </p>
             </div>
@@ -590,7 +590,7 @@ export default function WeSwapCardsPage() {
           {/* Button */}
           <Link
             href="/work/weswapcards-mobile"
-            className="bg-mustard text-green mt-10 inline-flex rounded px-6 py-3 font-sans text-sm transition-opacity hover:opacity-90"
+            className="bg-mustard text-green mt-10 inline-flex rounded px-6 py-3 font-sans text-base transition-opacity hover:opacity-90"
           >
             Continue to the mobile rebuild →
           </Link>
@@ -606,7 +606,7 @@ export default function WeSwapCardsPage() {
             <span className="text-mustard font-sans text-xs tracking-widest uppercase">
               ← PREVIOUS
             </span>
-            <span className="text-green font-sans text-sm">Back to all work</span>
+            <span className="text-green font-sans text-base">Back to all work</span>
           </Link>
 
           {/* Right: next project */}
@@ -615,7 +615,7 @@ export default function WeSwapCardsPage() {
             className="flex flex-col gap-1 md:items-end md:text-right"
           >
             <span className="text-mustard font-sans text-xs tracking-widest uppercase">NEXT →</span>
-            <span className="text-green font-sans text-sm">WeSwapCards Mobile</span>
+            <span className="text-green font-sans text-base">WeSwapCards Mobile</span>
           </Link>
         </div>
       </section>

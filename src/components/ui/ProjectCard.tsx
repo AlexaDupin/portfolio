@@ -84,7 +84,7 @@ export default function ProjectCard({
               </span>
             ))}
           </div>
-          {footerLabel && <p className="text-mustard font-sans text-sm italic">{footerLabel}</p>}
+          {footerLabel && <p className="text-mustard font-sans text-base italic">{footerLabel}</p>}
         </div>
       </div>
     </>

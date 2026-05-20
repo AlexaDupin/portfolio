@@ -9,7 +9,7 @@ export default function Nav() {
   return (
     <header className="bg-cream w-full">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-        <Link href="/" className="text-green font-serif text-2xl">
+        <Link href="/" className="text-green font-serif text-3xl">
           AD<span className="text-mustard">.</span>
         </Link>
 
@@ -17,13 +17,13 @@ export default function Nav() {
         <nav className="hidden items-center gap-8 md:flex">
           <Link
             href="/work"
-            className="text-green hover:text-mustard font-sans text-sm transition-colors"
+            className="text-green hover:text-mustard font-sans text-base transition-colors"
           >
             Work
           </Link>
           <Link
             href="/about"
-            className="text-green hover:text-mustard font-sans text-sm transition-colors"
+            className="text-green hover:text-mustard font-sans text-base transition-colors"
           >
             About
           </Link>
@@ -31,7 +31,7 @@ export default function Nav() {
             href="https://github.com/AlexaDupin"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-green hover:text-mustard font-sans text-sm transition-colors"
+            className="text-green hover:text-mustard font-sans text-base transition-colors"
           >
             GitHub
           </a>
@@ -39,7 +39,7 @@ export default function Nav() {
             href="https://www.linkedin.com/in/alexa-dupin"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-green text-cream rounded-full px-5 py-2 font-sans text-sm transition-opacity hover:opacity-90"
+            className="bg-green text-cream rounded-full px-5 py-2 font-sans text-base transition-opacity hover:opacity-90"
           >
             Get in touch
           </a>
@@ -51,7 +51,7 @@ export default function Nav() {
             href="https://www.linkedin.com/in/alexa-dupin"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-green text-cream rounded-full px-4 py-2 font-sans text-sm"
+            className="bg-green text-cream rounded-full px-4 py-2 font-sans text-base"
           >
             Get in touch
           </a>
@@ -93,14 +93,14 @@ export default function Nav() {
           <Link
             href="/work"
             onClick={() => setOpen(false)}
-            className="text-green font-sans text-sm"
+            className="text-green font-sans text-base"
           >
             Work
           </Link>
           <Link
             href="/about"
             onClick={() => setOpen(false)}
-            className="text-green font-sans text-sm"
+            className="text-green font-sans text-base"
           >
             About
           </Link>
@@ -108,7 +108,7 @@ export default function Nav() {
             href="https://github.com/AlexaDupin"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-green font-sans text-sm"
+            className="text-green font-sans text-base"
           >
             GitHub
           </a>

@@ -42,7 +42,7 @@ export default function WeSwapCardsMobilePage() {
           href="https://github.com/AlexaDupin/WeSwapCards-native"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-mustard text-green rounded px-6 py-3 font-sans text-sm transition-opacity hover:opacity-90"
+          className="bg-mustard text-green rounded px-6 py-3 font-sans text-base transition-opacity hover:opacity-90"
         >
           View on GitHub →
         </a>

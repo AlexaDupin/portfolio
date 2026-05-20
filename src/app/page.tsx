@@ -37,7 +37,7 @@ export default function Home() {
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/work"
-                className="bg-mustard text-green rounded px-6 py-3 font-sans text-sm transition-opacity hover:opacity-90"
+                className="bg-mustard text-green rounded px-6 py-3 font-sans text-base transition-opacity hover:opacity-90"
               >
                 See my work →
               </Link>
@@ -45,7 +45,7 @@ export default function Home() {
                 href="https://www.linkedin.com/in/alexa-dupin"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border-green text-green hover:bg-green/5 rounded border px-6 py-3 font-sans text-sm transition-colors"
+                className="border-green text-green hover:bg-green/5 rounded border px-6 py-3 font-sans text-base transition-colors"
               >
                 Connect on LinkedIn
               </a>
@@ -127,7 +127,7 @@ export default function Home() {
           <div className="mt-10 flex justify-end">
             <Link
               href="/work"
-              className="text-mustard font-sans text-sm transition-opacity hover:opacity-70"
+              className="text-mustard font-sans text-base transition-opacity hover:opacity-70"
             >
               See all work →
             </Link>

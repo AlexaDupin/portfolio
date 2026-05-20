@@ -73,13 +73,13 @@ export default function AboutPage() {
             <Fragment key={label}>
               <div
                 className={cn(
-                  "text-green/70 font-sans text-xs tracking-widest uppercase md:self-start",
+                  "text-green/70 font-sans text-sm tracking-widest uppercase md:self-start",
                   i > 0 && "mt-4 md:mt-0"
                 )}
               >
                 {label}
               </div>
-              <div className="text-green mt-1 font-sans text-sm leading-relaxed md:mt-0">
+              <div className="text-green mt-1 font-sans text-base leading-relaxed md:mt-0">
                 {items}
               </div>
             </Fragment>
@@ -122,7 +122,7 @@ export default function AboutPage() {
             href="https://www.linkedin.com/in/alexa-dupin"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-mustard text-green max-w-2xl rounded-md px-6 py-3 font-sans text-sm transition-opacity hover:opacity-90"
+            className="bg-mustard text-green max-w-2xl rounded-md px-6 py-3 font-sans text-base transition-opacity hover:opacity-90"
           >
             Connect on LinkedIn →
           </a>
